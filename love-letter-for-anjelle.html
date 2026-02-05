@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For You, Anjelle 💖</title>
+<style>
+  body {
+    background: #fff0f6;
+    font-family: "Courier New", monospace;
+    padding: 40px;
+    font-size: 22px;
+    color: #d6336c;
+  }
+  #text {
+    white-space: pre-wrap;
+    border-right: 3px solid #d6336c;
+    width: fit-content;
+    animation: blink 0.7s infinite;
+  }
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+</style>
+</head>
+<body>
+
+<div id="text"></div>
+
+<script>
+let msg = 
+"Hi Anjelle,\n\n" +
+"I just wanted to take a moment to tell you something…\n\n" +
+"Every day with you feels lighter, brighter, and softer.\n" +
+"You make everything better just by being you.\n\n" +
+"And I’m really lucky to have you. ❤️";
+
+let i = 0;
+
+function type() {
+  if (i < msg.length) {
+    document.getElementById("text").textContent += msg.charAt(i);
+    i++;
+    setTimeout(type, 60); // typing speed
+  }
+}
+type();
+</script>
+
+</body>
+</html>
